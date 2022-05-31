@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/Text.WBStyle.Bold.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/bold"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="@sample/item.json/price" />
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/Text.WBStyle.Bold.Purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:text="@sample/item.json/startCity" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/card_header_gradient" />
+
+        <TextView
+            android:id="@+id/tvStart"
+            style="@style/Text.WBStyle.Normal.Magenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/medium"
+            android:text="@string/start_date"
+            app:layout_constraintStart_toStartOf="@+id/tvEnd"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <TextView
+            android:id="@+id/startDate"
+            style="@style/Text.WBStyle.Normal.Magenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/medium"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvStart"
+            app:layout_constraintEnd_toStartOf="@+id/like"
+            tools:text="@sample/item.json/startDate" />
+
+        <TextView
+            android:id="@+id/tvEnd"
+            style="@style/Text.WBStyle.Normal.Magenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/medium"
+            android:text="@string/end_date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStart" />
+
+        <TextView
+            android:id="@+id/endDate"
+            style="@style/Text.WBStyle.Normal.Magenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvEnd"
+            app:layout_constraintEnd_toEndOf="@+id/startDate"
+            tools:text="@sample/item.json/endDate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/like"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:layout_marginEnd="16dp"
+            app:icon="@drawable/ic_baseline_thumb_up_off_alt_24"
+            app:layout_constraintBottom_toBottomOf="@+id/endDate"
+            app:layout_constraintEnd_toStartOf="@+id/details"
+            app:layout_constraintTop_toTopOf="@+id/startDate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/details"
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:layout_marginEnd="16dp"
+            app:icon="@drawable/ic_play_button_svgrepo_com"
+            app:layout_constraintBottom_toBottomOf="@+id/like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/like" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

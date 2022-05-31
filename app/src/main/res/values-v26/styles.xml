@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text.WBStyle.Normal" parent="Widget.AppCompat.TextView">
+        <item name="android:font">@font/medium</item>
+    </style>
+
+    <style name="Text.WBStyle.Bold" parent="Widget.AppCompat.TextView">
+        <item name="android:font">@font/bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.WBStyle.Normal.Dark" parent="Text.WBStyle.Normal">
+        <item name="android:textColor">@color/dark_violet</item>
+    </style>
+
+    <style name="Text.WBStyle.Normal.Purple" parent="Text.WBStyle.Normal">
+        <item name="android:textColor">@color/purplish</item>
+    </style>
+
+    <style name="Text.WBStyle.Normal.Magenta" parent="Text.WBStyle.Normal">
+        <item name="android:textColor">@color/magenta</item>
+    </style>
+
+    <style name="Text.WBStyle.Bold.Dark" parent="Text.WBStyle.Bold">
+        <item name="android:textColor">@color/dark_violet</item>
+    </style>
+
+    <style name="Text.WBStyle.Bold.Purple" parent="Text.WBStyle.Bold">
+        <item name="android:textColor">@color/purplish</item>
+    </style>
+
+    <style name="Text.WBStyle.Bold.Magenta" parent="Text.WBStyle.Bold">
+        <item name="android:textColor">@color/magenta</item>
+    </style>
+
+
+
+</resources>
