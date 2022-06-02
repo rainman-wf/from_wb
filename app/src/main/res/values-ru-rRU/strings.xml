@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Время путешествовать</string>
+    <string name="currency" translatable="false">РУБ</string>
+    <string name="start_city" translatable="false">Город отправления:</string>
+    <string name="end_city">Город прибытия:</string>
+    <string name="start_date">Дата отправления:</string>
+    <string name="end_date">Дата возвращения:</string>
+    <string name="price" translatable="false">Цена:</string>
+    <string name="search_token">Код рейса:</string>
+    <string name="back">НАЗАД</string>
+</resources>

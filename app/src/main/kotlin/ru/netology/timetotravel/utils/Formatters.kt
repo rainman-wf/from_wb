@@ -1,9 +1,7 @@
 package ru.netology.timetotravel.utils
 
-
 import android.annotation.SuppressLint
 import android.text.format.DateFormat
-
 
 @SuppressLint("SimpleDateFormat")
 fun formatDate(inputValue: String): String {

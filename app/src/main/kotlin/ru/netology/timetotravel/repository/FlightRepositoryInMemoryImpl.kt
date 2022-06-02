@@ -27,4 +27,8 @@ class FlightRepositoryInMemoryImpl : FlightRepository {
         flights[position] = item.copy(liked = !item.liked)
         data.value = flights
     }
+
+    fun getByPosition(position: Int): Data {
+        return flights[position]
+    }
 }

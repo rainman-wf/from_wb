@@ -3,17 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/background.xml" value="0.2645" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/background_wildberries.xml" value="0.196" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/card_header_gradient.xml" value="0.288" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/ic_baseline_thumb_up_24.xml" value="0.288" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/ic_like_24dp.xml" value="0.2195" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/ic_play_button_svgrepo_com.xml" value="0.288" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/drawable/ic_wildberries.xml" value="0.2195" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/font-v26/wb_fonts.xml" value="0.396875" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/font/wb_fonts.xml" value="0.396875" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/activity_home.xml" value="0.734375" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/activity_splash.xml" value="0.33" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/blank_fragment.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/flight_item_card.xml" value="0.67" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/fragment_conteiner.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/fragment_item_details.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/fragment_root.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/fragment_item_details.xml" value="0.67" />
+        <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/fragment_root.xml" value="0.5" />
         <entry key="..\:/Users/Dinar/AndroidProjecs/Timetotravel/app/src/main/res/layout/travel_item_card.xml" value="0.36666666666666664" />
       </map>
     </option>

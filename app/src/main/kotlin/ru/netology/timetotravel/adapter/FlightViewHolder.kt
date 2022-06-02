@@ -15,8 +15,6 @@ class FlightViewHolder(
     @SuppressLint("SetTextI18n")
     fun bind(flight: Data) {
 
-        log(bindingAdapterPosition)
-
         binding.apply {
             startDate.text = formatDate(flight.startDate)
             endDate.text = formatDate(flight.endDate)

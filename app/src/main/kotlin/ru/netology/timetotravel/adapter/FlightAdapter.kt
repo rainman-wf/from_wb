@@ -19,4 +19,5 @@ class FlightAdapter(private val onFlightClickListener: OnFlightClickListener) :
         val item = getItem(position)
         holder.bind(item)
     }
+
 }

@@ -1,16 +1,19 @@
 package ru.netology.timetotravel.fragments
 
 import android.os.Bundle
+import android.view.OnReceiveContentListener
 import android.view.View
+import android.view.ViewTreeObserver
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import ru.netology.timetotravel.MainActivity
 import ru.netology.timetotravel.R
 import ru.netology.timetotravel.adapter.FlightAdapter
 import ru.netology.timetotravel.adapter.OnFlightClickListener
 import ru.netology.timetotravel.databinding.FragmentRootBinding
-import ru.netology.timetotravel.utils.log
 import ru.netology.timetotravel.viewmodel.FlightViewModel
 
 class Root : Fragment(R.layout.fragment_root) {
@@ -21,11 +24,7 @@ class Root : Fragment(R.layout.fragment_root) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentRootBinding.bind(view)
 
-
-        binding.root.setOnClickListener { log("on root") }
-        binding.flightList.setOnClickListener { log("rv") }
-        binding.baseLayout.setOnClickListener { log("constrain") }
-        val viewModel: FlightViewModel by viewModels()
+        val viewModel: FlightViewModel by activityViewModels()
 
         val flightAdapter = FlightAdapter(
             object : OnFlightClickListener {
@@ -34,15 +33,21 @@ class Root : Fragment(R.layout.fragment_root) {
                 }
 
                 override fun onDetails(position: Int) {
-                    findNavController().navigate(R.id.action_root_to_itemDetails,
-                        bundleOf("position" to position))
+                    viewModel.onDetailsClicked(position)
+                    findNavController().navigate(
+                        R.id.action_root_to_itemDetails,
+                        bundleOf("position" to position)
+                    )
                 }
             }
         )
 
         binding.flightList.adapter = flightAdapter
 
-        viewModel.data.observe(viewLifecycleOwner) { flightAdapter.submitList(it) }
+        viewModel.data.observe(viewLifecycleOwner) {
+            flightAdapter.submitList(it.toList())
+            if (it.isNotEmpty()) (activity as MainActivity)
+                .findViewById<ConstraintLayout>(R.id.rootActivity).background = null
+        }
     }
 }
-
