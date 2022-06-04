@@ -28,20 +28,20 @@ class ItemDetails : Fragment(R.layout.fragment_item_details) {
         binding.like.setOnClickListener { viewModel.onLikeClicked(position) }
 
         viewModel.item.observe(viewLifecycleOwner) {
-            log(it?.searchToken)
+
+            val item = it ?: return@observe
+
+            log(item.searchToken)
 
             binding.apply {
-                startCity.text = it?.startCity
-                endCity.text = it?.endCity
-                detailsStartDate.text = formatDate(it?.startDate.toString())
-                detailsEndDate.text = formatDate(it?.endDate.toString())
-                detailsPrice.text = "${it?.price} ${getString(R.string.currency)}"
-                searchToken.text = it?.searchToken
+                startCity.text = item.startCity
+                endCity.text = item.endCity
+                detailsStartDate.text = formatDate(item.startDate)
+                detailsEndDate.text = formatDate(item.endDate)
+                detailsPrice.text = "${item.price} ${getString(R.string.currency)}"
+                searchToken.text = item.searchToken
 
-                like.setIconResource(
-                    if (it!!.liked) R.drawable.ic_baseline_thumb_up_24
-                    else R.drawable.ic_baseline_thumb_up_off_alt_24
-                )
+                like.isChecked = item.liked
 
                 back.setOnClickListener { findNavController().popBackStack() }
             }

@@ -98,17 +98,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/like"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            style="@style/Widget.App.Button.OutlinedButton.Like"
             android:layout_marginEnd="16dp"
-            android:contentDescription="@string/like"
-            app:icon="@drawable/ic_baseline_thumb_up_off_alt_24"
             app:layout_constraintBottom_toBottomOf="@+id/endDate"
             app:layout_constraintEnd_toStartOf="@+id/details"
             app:layout_constraintTop_toTopOf="@+id/startDate" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/details"
-            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            style="@style/Widget.App.Button.OutlinedButton.Like"
             android:layout_marginEnd="16dp"
             android:contentDescription="@string/details"
             app:icon="@drawable/ic_play_button_svgrepo_com"

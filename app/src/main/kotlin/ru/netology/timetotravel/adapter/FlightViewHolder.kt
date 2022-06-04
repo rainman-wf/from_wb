@@ -21,10 +21,7 @@ class FlightViewHolder(
             price.text = "${flight.price} ${binding.root.context.getText(R.string.currency)}"
             header.text = "${flight.startCity} — ${flight.endCity}"
 
-            like.setIconResource(
-                if (flight.liked) R.drawable.ic_baseline_thumb_up_24
-                else R.drawable.ic_baseline_thumb_up_off_alt_24
-            )
+            like.isChecked = flight.liked
 
             like.setOnClickListener { onFlightClickListener.onLike(bindingAdapterPosition) }
             details.setOnClickListener {onFlightClickListener.onDetails(bindingAdapterPosition)}
