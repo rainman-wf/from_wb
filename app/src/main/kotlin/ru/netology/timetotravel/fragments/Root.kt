@@ -9,6 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DefaultItemAnimator
 import ru.netology.timetotravel.MainActivity
 import ru.netology.timetotravel.R
 import ru.netology.timetotravel.adapter.FlightAdapter
@@ -42,7 +43,11 @@ class Root : Fragment(R.layout.fragment_root) {
             }
         )
 
-        binding.flightList.adapter = flightAdapter
+        binding.flightList.apply {
+            adapter = flightAdapter
+            val animator = itemAnimator
+            if (animator is DefaultItemAnimator) animator.supportsChangeAnimations = false
+        }
 
         viewModel.data.observe(viewLifecycleOwner) {
             flightAdapter.submitList(it.toList())
