@@ -9,4 +9,6 @@
     <string name="search_token">Search Token</string>
     <string name="like" translatable="false">like</string>
     <string name="back">BACK</string>
+    <string name="base_gradient" translatable="false">base_gradient</string>
+    <string name="details" translatable="false">details</string>
 </resources>

@@ -47,7 +47,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/card_header_gradient" />
+            app:srcCompat="@drawable/card_header_gradient"
+            android:contentDescription="@string/base_gradient" />
 
         <TextView
             android:id="@+id/tvStart"
@@ -99,6 +100,7 @@
             android:id="@+id/like"
             style="@style/Widget.App.Button.OutlinedButton.IconOnly"
             android:layout_marginEnd="16dp"
+            android:contentDescription="@string/like"
             app:icon="@drawable/ic_baseline_thumb_up_off_alt_24"
             app:layout_constraintBottom_toBottomOf="@+id/endDate"
             app:layout_constraintEnd_toStartOf="@+id/details"
@@ -108,6 +110,7 @@
             android:id="@+id/details"
             style="@style/Widget.App.Button.OutlinedButton.IconOnly"
             android:layout_marginEnd="16dp"
+            android:contentDescription="@string/details"
             app:icon="@drawable/ic_play_button_svgrepo_com"
             app:layout_constraintBottom_toBottomOf="@+id/like"
             app:layout_constraintEnd_toEndOf="parent"
